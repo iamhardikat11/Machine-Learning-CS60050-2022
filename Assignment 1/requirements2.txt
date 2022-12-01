@@ -1,0 +1,14 @@
+pip~=20.2.3
+attrs~=21.4.0
+cryptography~=36.0.1
+Pillow~=9.0.1
+tornado~=6.1
+Jinja2~=3.0.3
+setuptools~=60.5.0
+packaging~=21.3
+pyparsing~=3.0.7
+zipp~=3.7.0
+numpy~=1.22.2
+pandas~=1.4.4
+matplotlib~=3.5.1
+scikit-learn~=1.1.2
