@@ -1,0 +1,140 @@
+
+ ============= READING DATA ============ 
+
+     Alcohol  Malic acid   Ash  ...   Hue  OD280/OD315 of diluted wines  Proline
+0      14.23        1.71  2.43  ...  1.04                          3.92     1065
+1      13.20        1.78  2.14  ...  1.05                          3.40     1050
+2      13.16        2.36  2.67  ...  1.03                          3.17     1185
+3      14.37        1.95  2.50  ...  0.86                          3.45     1480
+4      13.24        2.59  2.87  ...  1.04                          2.93      735
+..       ...         ...   ...  ...   ...                           ...      ...
+173    13.71        5.65  2.45  ...  0.64                          1.74      740
+174    13.40        3.91  2.48  ...  0.70                          1.56      750
+175    13.27        4.28  2.26  ...  0.59                          1.56      835
+176    13.17        2.59  2.37  ...  0.60                          1.62      840
+177    14.13        4.10  2.74  ...  0.61                          1.60      560
+
+[178 rows x 13 columns]
+Time elapsed  =  0.03502297401428223 s
+
+ ============= DATA READ ============ 
+
+
+
+ ============= FEATURES ============ 
+
+
+1. Alcohol
+2. Malic acid
+3. Ash
+4. Alcalinity of ash
+5. Magnesium
+6. Total phenols
+7. Flavanoids
+8. Nonflavanoid phenols
+9. Proanthocyanins
+10. Color intensity
+11. Hue
+12. OD280/OD315 of diluted wines
+13. Proline
+
+ ============= STANDARD SCALAR NORMALISATION ============ 
+
+
+
+ ============= PROCESSED DATASET ============ 
+
+
+      Alcohol  Malic acid  ...  OD280/OD315 of diluted wines   Proline
+0    1.514341   -0.560668  ...                      1.842721  1.010159
+1    0.245597   -0.498009  ...                      1.110317  0.962526
+2    0.196325    0.021172  ...                      0.786369  1.391224
+3    1.686791   -0.345835  ...                      1.180741  2.328007
+4    0.294868    0.227053  ...                      0.448336 -0.037767
+..        ...         ...  ...                           ...       ...
+173  0.873810    2.966176  ...                     -1.227742 -0.021890
+174  0.491955    1.408636  ...                     -1.481267  0.009866
+175  0.331822    1.739837  ...                     -1.481267  0.279786
+176  0.208643    0.227053  ...                     -1.396759  0.295664
+177  1.391162    1.578712  ...                     -1.424928 -0.593486
+
+[178 rows x 13 columns]
+============= TRAIN TEST SPLIT COMPLETE ============
+
+Train Data size: 143 
+Test Data size = 35
+Time elapsed  =  0.4495549201965332 s
+
+
+============= BINARY SUPPORT VECTOR MACHINE(SVM) ============
+
+
+============== TRAINING STARTED ============
+
+Time elapsed  =  0.4591519832611084 s
+
+ ============= TRAINING FINISHED ============ 
+
+
+Accuracy (Linear Kernel):  97.14
+F1 (Linear Kernel):  97.17
+Accuracy (RBF Kernel):  100.00
+F1 (RBF Kernel):  100.00
+Accuracy (Quadratic Kernel):  88.57
+F1 (Quadratic Kernel):  88.62
+
+Maximum Accuracy is Achieved for Radial Basis Function Kernel.
+Maximum F1-Score is Achieved for Radial Basis Function Kernel.
+
+ ============= MULTI-LAYER PERCEPTRON(MLP) CLASSIFIER ============ 
+
+
+
+============== TRAINING STARTED ============
+
+
+ * Stochastic Gradient Optimiser
+ -> Batch Size = 32
+ -> Learning Rate = 0.001
+ Implemented with varying hidden layer:- 
+   1. 1 hidden layer with 16 nodes 
+   2. 2 hidden layers with 256 and 16 nodes respectively.
+Accuracy is 1.0 for 1st Classifier.
+Accuracy is 1.0 for 2nd Classifier.
+Time elapsed  =  1.2745239734649658 s
+
+
+ ============= TRAINING FINISHED ============ 
+
+
+
+ ========= VARYING LEARNING RATE TO FIND BEST ONE ========= 
+
+
+============== TRAINING STARTED ============
+
+ * Accuracy is 40.0000 for Learning Rate: 0.00001
+ * Accuracy is 71.4286 for Learning Rate: 0.00010
+ * Accuracy is 100.0000 for Learning Rate: 0.00100
+ * Accuracy is 100.0000 for Learning Rate: 0.01000
+ * Accuracy is 100.0000 for Learning Rate: 0.10000
+Time elapsed  =  3.0567240715026855 s
+
+
+ ============= TRAINING FINISHED ============ 
+
+
+
+ ============= FORWARD SELECTION METHOD ============ 
+
+
+ ****** THE BEST FEATURES ARE ******** 
+
+ * 1. Flavanoids
+ * 2. Alcohol
+ * 3. Ash
+Accuracy for these Best Features Selected from Forward Selection:  1.0
+
+ ============= ENSEMBLE LEARNING ============ 
+
+Accuracy of Hard Voting: 97.75281 %.

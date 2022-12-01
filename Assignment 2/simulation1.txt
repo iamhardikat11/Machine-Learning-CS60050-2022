@@ -1,0 +1,85 @@
+
+ ============= READING DATA ============ 
+
+     Alcohol  Malic acid   Ash  ...   Hue  OD280/OD315 of diluted wines  Proline
+0      14.23        1.71  2.43  ...  1.04                          3.92     1065
+1      13.20        1.78  2.14  ...  1.05                          3.40     1050
+2      13.16        2.36  2.67  ...  1.03                          3.17     1185
+3      14.37        1.95  2.50  ...  0.86                          3.45     1480
+4      13.24        2.59  2.87  ...  1.04                          2.93      735
+..       ...         ...   ...  ...   ...                           ...      ...
+173    13.71        5.65  2.45  ...  0.64                          1.74      740
+174    13.40        3.91  2.48  ...  0.70                          1.56      750
+175    13.27        4.28  2.26  ...  0.59                          1.56      835
+176    13.17        2.59  2.37  ...  0.60                          1.62      840
+177    14.13        4.10  2.74  ...  0.61                          1.60      560
+
+[178 rows x 13 columns]
+Time elapsed  =  0.023481130599975586 s
+
+ ============= DATA READ ============ 
+
+
+
+ ============= FEATURES ============ 
+
+
+1. Alcohol
+2. Malic acid
+3. Ash
+4. Alcalinity of ash
+5. Magnesium
+6. Total phenols
+7. Flavanoids
+8. Nonflavanoid phenols
+9. Proanthocyanins
+10. Color intensity
+11. Hue
+12. OD280/OD315 of diluted wines
+13. Proline
+
+ ============= APPLYING PCA ============ 
+
+Number of Components selected: 10
+Variance captured: 96.16971684450642 % ( > 95%)
+Time elapsed  =  0.5473721027374268 s
+
+ ============= COMPONENTS SELECTED FOR CLUSTERING ============ 
+
+
+      Alcohol  Malic acid  ...  Proanthocyanins  Color intensity
+0    3.316751   -1.443463  ...         0.641443         1.020956
+1    2.209465    0.333393  ...        -0.308847         0.159701
+2    2.516740   -1.031151  ...        -1.177834         0.113361
+3    3.757066   -2.756372  ...         0.052544         0.239413
+4    1.008908   -0.869831  ...         0.326819        -0.078366
+..        ...         ...  ...              ...              ...
+173 -3.370524   -2.216289  ...        -0.022498        -0.304117
+174 -2.601956   -1.757229  ...        -0.097969        -0.206061
+175 -2.677839   -2.760899  ...         0.001222        -0.247997
+176 -2.387017   -2.297347  ...         0.057448         0.491490
+177 -3.208758   -2.768920  ...         0.741660        -0.117969
+
+[178 rows x 10 columns]
+Time elapsed  =  0.5596191883087158 s
+
+ ============= CLUSTERING STARTED ============ 
+
+--> Iteration 1: For value of K: 2 Normalised Mutual Info:- 0.4837708380148453.
+--> Iteration 2: For value of K: 3 Normalised Mutual Info:- 0.8472896471857924.
+--> Iteration 3: For value of K: 4 Normalised Mutual Info:- 0.7612635309132971.
+--> Iteration 4: For value of K: 5 Normalised Mutual Info:- 0.6979912729775097.
+--> Iteration 5: For value of K: 6 Normalised Mutual Info:- 0.6659911094325242.
+--> Iteration 6: For value of K: 7 Normalised Mutual Info:- 0.6032026471650354.
+--> Iteration 7: For value of K: 8 Normalised Mutual Info:- 0.5954225310521523.
+
+Time elapsed  =  0.587968111038208 s
+
+ ============= CLUSTERING FINISHED ============ 
+
+
+
+ ============= NORMALISED MUTUAL INFO. RESULT ============ 
+
+
+The Maximum value for NMI is :- 0.8472896471857924 and is Obtained for K = 3
